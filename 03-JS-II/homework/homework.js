@@ -130,9 +130,11 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   if (numero === 0 || numero === 1) {return "falso"}
-  for(let i = 2; i < 100; i++) {console.log(numero % i) }
+  for(let i = 2; i < numero; i++)   {if(Number.isInteger(numero / i))  {return "falso"}}
+  return "true"
+    
+  }
        
-}
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
